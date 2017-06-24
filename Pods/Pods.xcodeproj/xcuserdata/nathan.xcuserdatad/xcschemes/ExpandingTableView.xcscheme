@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'F454DEC414E2290508A4D39C2A0FD433'
-               BlueprintName = 'Pods-AutoText'
+               BlueprintIdentifier = 'A2FD3C3A84924F74D4BCD84731640B8F'
+               BlueprintName = 'ExpandingTableView'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods-AutoText.framework'>
+               BuildableName = 'ExpandingTableView.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
