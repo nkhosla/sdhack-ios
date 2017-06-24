@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1591A824E2414690C37B2ECC /* Pods_AutoTextUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB9248D988DE851919D8B30 /* Pods_AutoTextUITests.framework */; };
 		BBD4B00CE494D178A0D85078 /* Pods_AutoTextTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C34E6C026C0397693E49F563 /* Pods_AutoTextTests.framework */; };
+		D87B50A51EFF281D00404EEB /* ServerTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87B50A41EFF281D00404EEB /* ServerTools.swift */; };
 		D88D9F381EFF17CF003F3F8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88D9F371EFF17CF003F3F8F /* AppDelegate.swift */; };
 		D88D9F3A1EFF17CF003F3F8F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88D9F391EFF17CF003F3F8F /* FirstViewController.swift */; };
 		D88D9F3C1EFF17CF003F3F8F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88D9F3B1EFF17CF003F3F8F /* SecondViewController.swift */; };
@@ -47,6 +48,7 @@
 		ACD074DCBC93B0E7DF25A187 /* Pods-AutoTextUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoTextUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoTextUITests/Pods-AutoTextUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B9A3905FF09E87F8E7D776B2 /* Pods-AutoText.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoText.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutoText/Pods-AutoText.debug.xcconfig"; sourceTree = "<group>"; };
 		C34E6C026C0397693E49F563 /* Pods_AutoTextTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoTextTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D87B50A41EFF281D00404EEB /* ServerTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServerTools.swift; path = ../ServerTools.swift; sourceTree = "<group>"; };
 		D88D9F341EFF17CF003F3F8F /* AutoText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88D9F371EFF17CF003F3F8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D88D9F391EFF17CF003F3F8F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		D88D9F361EFF17CF003F3F8F /* AutoText */ = {
 			isa = PBXGroup;
 			children = (
+				D87B50A41EFF281D00404EEB /* ServerTools.swift */,
 				D88D9F371EFF17CF003F3F8F /* AppDelegate.swift */,
 				D88D9F391EFF17CF003F3F8F /* FirstViewController.swift */,
 				D88D9F3B1EFF17CF003F3F8F /* SecondViewController.swift */,
@@ -436,6 +439,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D87B50A51EFF281D00404EEB /* ServerTools.swift in Sources */,
 				D88D9F3C1EFF17CF003F3F8F /* SecondViewController.swift in Sources */,
 				D88D9F381EFF17CF003F3F8F /* AppDelegate.swift in Sources */,
 				D88D9F3A1EFF17CF003F3F8F /* FirstViewController.swift in Sources */,
