@@ -1,3 +1,19 @@
-PODFILE CHECKSUM: eb06e22bca39457170a70bef7390b3a776bb12c8
+PODS:
+  - Alamofire (4.5.0)
+  - Chatto (3.1.0)
+  - ChattoAdditions (3.1.0):
+    - Chatto
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4)
+  - Chatto (= 3.1.0)
+  - ChattoAdditions (= 3.1.0)
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  Chatto: d959be2d284db62c713c68d7c39f2712ff902fa2
+  ChattoAdditions: 64cfe2d3414a65d2d6bc8a1c5704df491eec28b6
+
+PODFILE CHECKSUM: f61e84b34cc9d702c66214dfd9ba87b4340d3bcc
 
 COCOAPODS: 1.0.1

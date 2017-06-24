@@ -7,6 +7,8 @@ target 'AutoText' do
 
   # Pods for AutoText
     pod 'Alamofire', '~> 4.4'
+    pod 'Chatto', '= 3.1.0'
+    pod 'ChattoAdditions', '= 3.1.0' # if you want to use the cells or the input component
 
   target 'AutoTextTests' do
     inherit! :search_paths
