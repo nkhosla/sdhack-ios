@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'F454DEC414E2290508A4D39C2A0FD433'
-               BlueprintName = 'Pods-AutoText'
+               BlueprintIdentifier = '84E600722CD771D5B016BEE9C6225C53'
+               BlueprintName = 'PopupDialog'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods-AutoText.framework'>
+               BuildableName = 'PopupDialog.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
