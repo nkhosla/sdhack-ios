@@ -42,8 +42,13 @@ class ServerTools: NSObject {
             .responseJSON { response in
                 if (response.result.error == nil) {
                     
-                    debugPrint("HTTP Response Body: \(response.data)")
-                            completion(2.2)
+                    debugPrint("HTTP Response Body: \(response)")
+                    
+                  let intvalstring = "\(response)".components(separatedBy: " ")[1]
+                  print(intvalstring)
+                   
+                    
+                    completion(Float(intvalstring)!)
                 }
                 else {
                     debugPrint("HTTP Request failed: \(response.result.error)")
@@ -53,7 +58,12 @@ class ServerTools: NSObject {
         
     }
     
-    func clearDatabase() {
+    class func luisAnanlyzeString(str: String, completion: @escaping (_ dict: String) -> Void) {
+        
+    }
+    
+    
+    class func clearDatabase() {
         
     }
 }
