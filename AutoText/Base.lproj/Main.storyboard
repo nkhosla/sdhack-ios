@@ -12,27 +12,20 @@
         <!--Questions-->
         <scene sceneID="NR6-OH-SZo">
             <objects>
-                <tableViewController id="MYP-oV-4tV" sceneMemberID="viewController">
+                <tableViewController id="MYP-oV-4tV" customClass="QuestionViewController" customModule="AutoText" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4GQ-4X-fLZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="2OY-GN-hgr">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2OY-GN-hgr" id="vCI-xa-Isi">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="MYP-oV-4tV" id="vBu-pJ-pRc"/>
+                            <outlet property="dataSource" destination="MYP-oV-4tV" id="Ab6-x8-TqM"/>
                             <outlet property="delegate" destination="MYP-oV-4tV" id="h1x-XG-EYJ"/>
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Questions" id="Epd-Ja-u3k"/>
+                    <connections>
+                        <outlet property="questionTableView" destination="4GQ-4X-fLZ" id="j60-2g-Ei9"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ylD-C0-h3G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

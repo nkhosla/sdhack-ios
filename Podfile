@@ -9,7 +9,6 @@ target 'AutoText' do
     pod 'Alamofire', '~> 4.4'
     pod 'Chatto', '= 3.1.0'
     pod 'ChattoAdditions', '= 3.1.0' # if you want to use the cells or the input component
-    pod 'ExpandingTableView'
     pod 'PopupDialog', '~> 0.5'
 
   target 'AutoTextTests' do
