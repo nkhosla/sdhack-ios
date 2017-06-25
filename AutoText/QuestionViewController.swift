@@ -32,18 +32,18 @@ class QuestionViewController: UITableViewController {
         let nib = UINib(nibName: "QuestionTableViewCell", bundle: nil)
         
         tableView.register(nib, forCellReuseIdentifier: "questioncell")
-
+        
         ServerTools.stringSimilarity(stringOne: "where am I", stringTwo: "who am I") {(intval:Float) -> Void in
             print(intval)
         }
         
         print("mid")
         ServerTools.luisAnanlyzeString(str: "What time is the flight for the wedding?") {(int:String, ents:[String]) -> Void in
-        print("here")
+            print("here")
             print(int, ents)
         }
     }
- 
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
@@ -64,8 +64,35 @@ class QuestionViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = ChatViewController(nibName: "ChatViewController", bundle: nil)
+        var dataSource: FakeDataSource!
+        let pageSize = 50
         
-       
+        
+        switch indexPath.row {
+        case 0:
+            dataSource = FakeDataSource(messages: FriendMessageFactory.createMessages(sender:"Genevieve"), pageSize: pageSize)
+            
+            
+        case 1:
+            dataSource = FakeDataSource(messages: FriendMessageFactory.createMessages(sender:"Lucy"), pageSize: pageSize)
+            
+            
+        case 2:
+            dataSource = FakeDataSource(messages: FriendMessageFactory.createMessages(sender:"Chad"), pageSize: pageSize)
+            
+        default:
+            break
+        }
+        
+        
+        vc.dataSource = dataSource
+        vc.messageSender = dataSource.messageSender
+        
+        navigationController?.pushViewController(vc, animated: true)
+        
+        
+        
     }
 }
 

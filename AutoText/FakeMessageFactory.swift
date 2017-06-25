@@ -1,18 +1,18 @@
 /*
  The MIT License (MIT)
-
+ 
  Copyright (c) 2015-present Badoo Trading Limited.
-
+ 
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
  in the Software without restriction, including without limitation the rights
  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  copies of the Software, and to permit persons to whom the Software is
  furnished to do so, subject to the following conditions:
-
+ 
  The above copyright notice and this permission notice shall be included in
  all copies or substantial portions of the Software.
-
+ 
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -20,7 +20,7 @@
  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
-*/
+ */
 
 import Foundation
 import Chatto
@@ -40,8 +40,10 @@ func createTextMessageModel(_ uid: String, text: String, isIncoming: Bool) -> De
 }
 
 func createMessageModel(_ uid: String, isIncoming: Bool, type: String) -> MessageModel {
-    let senderId = isIncoming ? "1" : "2"
-    let messageStatus = isIncoming || arc4random_uniform(100) % 3 == 0 ? MessageStatus.success : .failed
+    //let senderId = isIncoming ? "1" : "2"
+    let senderId = "1"
+    // let messageStatus = isIncoming || arc4random_uniform(100) % 3 == 0 ? MessageStatus.success : .failed
+    let messageStatus = MessageStatus.success
     let messageModel = MessageModel(uid: uid, senderId: senderId, type: type, isIncoming: isIncoming, date: Date(), status: messageStatus)
     return messageModel
 }
@@ -56,12 +58,12 @@ class FakeMessageFactory {
     static let demoTexts = [
         "Lorem ipsum dolor sit amet 😇, https://github.com/badoo/Chatto consectetur adipiscing elit , sed do eiusmod tempor incididunt 07400000000 📞 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore https://github.com/badoo/Chatto eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 07400000000 non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     ]
-
+    
     class func createChatItem(_ uid: String) -> MessageModelProtocol {
         let isIncoming: Bool = arc4random_uniform(100) % 2 == 0
         return self.createChatItem(uid, isIncoming: isIncoming)
     }
-
+    
     class func createChatItem(_ uid: String, isIncoming: Bool) -> MessageModelProtocol {
         if arc4random_uniform(100) % 2 == 0 {
             return self.createTextMessageModel(uid, isIncoming: isIncoming)
@@ -69,7 +71,7 @@ class FakeMessageFactory {
             return self.createPhotoMessageModel(uid, isIncoming: isIncoming)
         }
     }
-
+    
     class func createTextMessageModel(_ uid: String, isIncoming: Bool) -> DemoTextMessageModel {
         let incomingText: String = isIncoming ? "incoming" : "outgoing"
         let maxText = self.demoTexts.randomItem()
@@ -77,7 +79,7 @@ class FakeMessageFactory {
         let text = "\(maxText.substring(to: maxText.characters.index(maxText.startIndex, offsetBy: length))) incoming:\(incomingText), #:\(uid)"
         return AutoText.createTextMessageModel(uid, text: text, isIncoming: isIncoming)
     }
-
+    
     class func createPhotoMessageModel(_ uid: String, isIncoming: Bool) -> DemoPhotoMessageModel {
         var imageSize = CGSize.zero
         switch arc4random_uniform(100) % 3 {
@@ -90,7 +92,7 @@ class FakeMessageFactory {
         default:
             imageSize = CGSize(width: 300, height: 300)
         }
-
+        
         var imageName: String
         switch arc4random_uniform(100) % 3 {
         case 0:
@@ -118,6 +120,68 @@ extension PhotoMessageModel {
     }
 }
 
+
+// This class added by Nathan Khosla
+
+class FriendMessageFactory {
+    static let genevieveMessage = [("text", "When are we meeting to go to the party?")]
+    static let lucyMessage = [("text", "What time does this party start?")]
+    static let chadMessage = [("text", "Girl you know I cant wait to see you 😜"),
+                              ("text", "What time are you arriving?")]
+    
+    static func createMessages(sender: String) -> [MessageModelProtocol] {
+        var result = [MessageModelProtocol]()
+        switch sender {
+        case "Genevieve":
+            for (index, message) in self.genevieveMessage.enumerated() {
+                let type = message.0
+                let content = message.1
+                let isIncoming: Bool = arc4random_uniform(100) % 2 == 0
+                
+                if type == "text" {
+                    result.append(createTextMessageModel("tutorial-\(index)", text: content, isIncoming: isIncoming))
+                } else {
+                    let image = UIImage(named: content)!
+                    result.append(createPhotoMessageModel("tutorial-\(index)", image:image, size: image.size, isIncoming: isIncoming))
+                }
+            }
+        case "Lucy":
+            
+            for (index, message) in self.lucyMessage.enumerated() {
+                let type = message.0
+                let content = message.1
+                let isIncoming: Bool = arc4random_uniform(100) % 2 == 0
+                
+                if type == "text" {
+                    result.append(createTextMessageModel("tutorial-\(index)", text: content, isIncoming: isIncoming))
+                } else {
+                    let image = UIImage(named: content)!
+                    result.append(createPhotoMessageModel("tutorial-\(index)", image:image, size: image.size, isIncoming: isIncoming))
+                }
+            }
+            
+        case "Chad":
+            for (index, message) in self.chadMessage.enumerated() {
+                let type = message.0
+                let content = message.1
+                let isIncoming: Bool = arc4random_uniform(100) % 2 == 0
+                
+                if type == "text" {
+                    result.append(createTextMessageModel("tutorial-\(index)", text: content, isIncoming: isIncoming))
+                } else {
+                    let image = UIImage(named: content)!
+                    result.append(createPhotoMessageModel("tutorial-\(index)", image:image, size: image.size, isIncoming: isIncoming))
+                }
+            }
+        default:
+            break
+            
+        }
+        
+        return result
+    }
+}
+
 class TutorialMessageFactory {
     static let messages = [
         ("text", "Welcome to Chatto! A lightweight Swift framework to build chat apps"),
@@ -134,14 +198,14 @@ class TutorialMessageFactory {
         ("text", "Failed/sending status are completly separated cells. This helps to keep cells them simpler. They are generated with the decorator as well, but other approaches are possible, like being returned by the DataSource or using more complex cells"),
         ("text", "More info on https://github.com/badoo/Chatto. We are waiting for your pull requests!")
     ]
-
+    
     static func createMessages() -> [MessageModelProtocol] {
         var result = [MessageModelProtocol]()
         for (index, message) in self.messages.enumerated() {
             let type = message.0
             let content = message.1
             let isIncoming: Bool = arc4random_uniform(100) % 2 == 0
-
+            
             if type == "text" {
                 result.append(createTextMessageModel("tutorial-\(index)", text: content, isIncoming: isIncoming))
             } else {

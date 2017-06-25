@@ -18,6 +18,8 @@ class ChatViewController: BaseChatViewController {
                 self.chatDataSource = self.dataSource
             }
         }
+    
+    let chatName = "Chat"
         
         lazy private var baseMessageHandler: BaseMessageHandler = {
             return BaseMessageHandler(messageSender: self.messageSender)
@@ -30,6 +32,7 @@ class ChatViewController: BaseChatViewController {
             let addIncomingMessageButton = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(ChatViewController.addRandomIncomingMessage))
             self.navigationItem.rightBarButtonItem = addIncomingMessageButton
         }
+    
     
         @objc
         private func addRandomIncomingMessage() {
