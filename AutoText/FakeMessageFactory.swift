@@ -60,7 +60,8 @@ class FakeMessageFactory {
     ]
     
     class func createChatItem(_ uid: String) -> MessageModelProtocol {
-        let isIncoming: Bool = arc4random_uniform(100) % 2 == 0
+        //let isIncoming: Bool = arc4random_uniform(100) % 2 == 0
+        let isIncoming: Bool = true
         return self.createChatItem(uid, isIncoming: isIncoming)
     }
     
@@ -136,7 +137,7 @@ class FriendMessageFactory {
             for (index, message) in self.genevieveMessage.enumerated() {
                 let type = message.0
                 let content = message.1
-                let isIncoming: Bool = arc4random_uniform(100) % 2 == 0
+                let isIncoming: Bool = true
                 
                 if type == "text" {
                     result.append(createTextMessageModel("tutorial-\(index)", text: content, isIncoming: isIncoming))
@@ -150,7 +151,7 @@ class FriendMessageFactory {
             for (index, message) in self.lucyMessage.enumerated() {
                 let type = message.0
                 let content = message.1
-                let isIncoming: Bool = arc4random_uniform(100) % 2 == 0
+                let isIncoming: Bool = true
                 
                 if type == "text" {
                     result.append(createTextMessageModel("tutorial-\(index)", text: content, isIncoming: isIncoming))
@@ -164,7 +165,7 @@ class FriendMessageFactory {
             for (index, message) in self.chadMessage.enumerated() {
                 let type = message.0
                 let content = message.1
-                let isIncoming: Bool = arc4random_uniform(100) % 2 == 0
+                let isIncoming: Bool = true
                 
                 if type == "text" {
                     result.append(createTextMessageModel("tutorial-\(index)", text: content, isIncoming: isIncoming))
