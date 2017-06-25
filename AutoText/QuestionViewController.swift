@@ -33,6 +33,9 @@ class QuestionViewController: UITableViewController {
         
         tableView.register(nib, forCellReuseIdentifier: "questioncell")
 
+        ServerTools.stringSimilarity(stringOne: "where am I", stringTwo: "who am I") {(intval:Float) -> Void in
+            print(intval)
+        }
     }
  
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -40,7 +43,7 @@ class QuestionViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return questionList.count
+        return contactNameList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -12,8 +12,45 @@ import Alamofire
 class ServerTools: NSObject {
 
     
-    func getImageURL(keyword: String) -> NSURL {
+    class func getImageURL(keyword: String) -> NSURL {
         return NSURL.init();
+    }
+    
+    class func stringSimilarity(stringOne: String, stringTwo:String, completion: @escaping (_ result: Float) -> Void) {
+        
+        let key = "1026c146bff64614876c55f4b1db402e";
+        
+        /**
+         Similarity (Get)
+         get https://westus.api.cognitive.microsoft.com/academic/v1.0/similarity
+         */
+        
+        // Add Headers
+        let headers = [
+            "Ocp-Apim-Subscription-Key":key,
+            ]
+        
+        // Add URL parameters
+        let urlParams = [
+            "s1":stringOne,
+            "s2":stringTwo,
+            ]
+        
+        // Fetch Request
+        Alamofire.request("https://westus.api.cognitive.microsoft.com/academic/v1.0/similarity", method: .get, parameters: urlParams, headers: headers)
+            .validate(statusCode: 200..<300)
+            .responseJSON { response in
+                if (response.result.error == nil) {
+                    
+                    debugPrint("HTTP Response Body: \(response.data)")
+                            completion(2.2)
+                }
+                else {
+                    debugPrint("HTTP Request failed: \(response.result.error)")
+                }
+        }
+        
+        
     }
     
     func clearDatabase() {
