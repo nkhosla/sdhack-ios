@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E28D21415F22166789BF8E5A699EAB86'
-               BlueprintName = 'Pods-AutoText'
+               BlueprintIdentifier = '5450D3E5A9B48CF6835032E7AAE99ACC'
+               BlueprintName = 'NoChat'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods-AutoText.framework'>
+               BuildableName = 'NoChat.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
