@@ -84,11 +84,11 @@ class ServerTools: NSObject {
                 if (response.result.error == nil) {
                     
                     if let result = response.result.value {
-                       // print("JSON: \(result)")
+                        print("JSON: \(result)")
                         
                         let json = result as! NSDictionary
                         
-                       // print(type(of: json))
+                        print(type(of: json))
                         
                         let topScoringIntentDict = json["topScoringIntent"] as! NSDictionary
                         let intent = topScoringIntentDict["intent"] as! String

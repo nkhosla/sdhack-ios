@@ -32,7 +32,7 @@ class QuestionViewController: UITableViewController {
         let nib = UINib(nibName: "QuestionTableViewCell", bundle: nil)
         
         tableView.register(nib, forCellReuseIdentifier: "questioncell")
-        
+        /*
         ServerTools.stringSimilarity(stringOne: "where am I", stringTwo: "who am I") {(intval:Float) -> Void in
             print(intval)
         }
@@ -42,6 +42,7 @@ class QuestionViewController: UITableViewController {
             print("here")
             print(int, ents)
         }
+        */
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -82,14 +83,28 @@ class QuestionViewController: UITableViewController {
             name = "Genevieve"
             ServerTools.luisAnanlyzeString(str: "When are we meeting to go to the party?"){ (intent, entities) in
                 
-                AnsweredQuestionStore.shared.mostRecentQuestion = [intent, entities]
+                AnsweredQuestionStore.shared.mostRecentQuestion = [intent, "When are we meeting to go to the party?"]
             }
+            print("gv")
+            AnsweredQuestionStore.shared.getAnswersForQuestion(q: "When are we meeting to go to the party?") {(str: String) -> Void in
+                
+                print("calling showsugg")
+                vc.showSuggestion(str)
+            }
+            
+            
         case 1:
             dataSource = FakeDataSource(messages: FriendMessageFactory.createMessages(sender:"Lucy"), pageSize: pageSize)
             name = "Lucy"
             ServerTools.luisAnanlyzeString(str: "What time does this party start?"){ (intent, entities) in
 
-                AnsweredQuestionStore.shared.mostRecentQuestion = [intent, entities]
+                AnsweredQuestionStore.shared.mostRecentQuestion = [intent, "What time does this party start?"]
+            }
+            
+            AnsweredQuestionStore.shared.getAnswersForQuestion(q: "What time does this party start?") {(str: String) -> Void in
+                
+                print("calling showsugg")
+                vc.showSuggestion(str)
             }
             
         case 2:
@@ -97,7 +112,14 @@ class QuestionViewController: UITableViewController {
             name = "Chad"
             ServerTools.luisAnanlyzeString(str: "What time are you arriving?"){ (intent, entities) in
 
-                AnsweredQuestionStore.shared.mostRecentQuestion = [intent, entities]
+                AnsweredQuestionStore.shared.mostRecentQuestion = [intent, "What time are you arriving?"]
+                
+            }
+            
+            AnsweredQuestionStore.shared.getAnswersForQuestion(q: "What time are you arriving?") {(str: String) -> Void in
+             
+                print("calling showsugg")
+                vc.showSuggestion(str)
             }
             
         default:
