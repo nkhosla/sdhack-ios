@@ -24,6 +24,8 @@
 		D8A4984A1EFF58F300F88273 /* boy in Resources */ = {isa = PBXBuildFile; fileRef = D8A498471EFF58F300F88273 /* boy */; };
 		D8A4984B1EFF58F300F88273 /* girl in Resources */ = {isa = PBXBuildFile; fileRef = D8A498481EFF58F300F88273 /* girl */; };
 		D8A4984C1EFF58F300F88273 /* girl2 in Resources */ = {isa = PBXBuildFile; fileRef = D8A498491EFF58F300F88273 /* girl2 */; };
+		D8A498541EFF9F9C00F88273 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A498521EFF9F9C00F88273 /* ChatViewController.swift */; };
+		D8A498551EFF9F9C00F88273 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8A498531EFF9F9C00F88273 /* ChatViewController.xib */; };
 		E8C7D33D566C75A2E23F8468 /* Pods_AutoText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0504B9BDA8259BC6D7B36619 /* Pods_AutoText.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,8 @@
 		D8A498471EFF58F300F88273 /* boy */ = {isa = PBXFileReference; lastKnownFileType = file; path = boy; sourceTree = "<group>"; };
 		D8A498481EFF58F300F88273 /* girl */ = {isa = PBXFileReference; lastKnownFileType = file; path = girl; sourceTree = "<group>"; };
 		D8A498491EFF58F300F88273 /* girl2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = girl2; sourceTree = "<group>"; };
+		D8A498521EFF9F9C00F88273 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		D8A498531EFF9F9C00F88273 /* ChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,8 @@
 			children = (
 				D8A4984D1EFF58F800F88273 /* Profile Pics */,
 				D87B50A41EFF281D00404EEB /* ServerTools.swift */,
+				D8A498521EFF9F9C00F88273 /* ChatViewController.swift */,
+				D8A498531EFF9F9C00F88273 /* ChatViewController.xib */,
 				D88D9F371EFF17CF003F3F8F /* AppDelegate.swift */,
 				D88D9F391EFF17CF003F3F8F /* FirstViewController.swift */,
 				D88D9F3B1EFF17CF003F3F8F /* SecondViewController.swift */,
@@ -321,6 +327,7 @@
 				D8A46FD51EFF45300000BCBF /* QuestionTableViewCell.xib in Resources */,
 				D8A4984B1EFF58F300F88273 /* girl in Resources */,
 				D88D9F411EFF17CF003F3F8F /* Assets.xcassets in Resources */,
+				D8A498551EFF9F9C00F88273 /* ChatViewController.xib in Resources */,
 				D88D9F3F1EFF17CF003F3F8F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +479,7 @@
 				D87B50A51EFF281D00404EEB /* ServerTools.swift in Sources */,
 				D8A46FCC1EFF321E0000BCBF /* QuestionViewController.swift in Sources */,
 				D88D9F3C1EFF17CF003F3F8F /* SecondViewController.swift in Sources */,
+				D8A498541EFF9F9C00F88273 /* ChatViewController.swift in Sources */,
 				D8A46FD41EFF45300000BCBF /* QuestionTableViewCell.swift in Sources */,
 				D88D9F381EFF17CF003F3F8F /* AppDelegate.swift in Sources */,
 				D88D9F3A1EFF17CF003F3F8F /* FirstViewController.swift in Sources */,
