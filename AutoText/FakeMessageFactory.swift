@@ -128,7 +128,7 @@ class FriendMessageFactory {
     static let genevieveMessage = [("text", "When are we meeting to go to the party?")]
     static let lucyMessage = [("text", "What time does this party start?")]
     static let chadMessage = [("text", "Girl you know I cant wait to see you 😜"),
-                              ("text", "What time are you arriving?")]
+                              ("text", "What time are you arriving at this party?")]
     
     static func createMessages(sender: String) -> [MessageModelProtocol] {
         var result = [MessageModelProtocol]()
