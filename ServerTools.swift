@@ -7,7 +7,16 @@
 //
 
 import UIKit
+import Alamofire
 
 class ServerTools: NSObject {
 
+    
+    func getImageURL(keyword: String) -> NSURL {
+        <#function body#>
+    }
+    
+    func clearDatabase() {
+        
+    }
 }

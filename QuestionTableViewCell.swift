@@ -6,6 +6,8 @@
 //  Copyright © 2017 Nathan khosla. All rights reserved.
 //
 
+// 375 by 667
+
 import UIKit
 
 class QuestionTableViewCell: UITableViewCell {
