@@ -18,6 +18,10 @@ class QuestionViewController: UITableViewController {
                         "What time is dinner?",
                         "Where are we going?"];
     
+    let contactNameList = ["Genevieve", "Lucy", "Chad"];
+    
+    let contactImageList = ["girl", "girl2", "boy"];
+    
     let newQuestionDelay = 15;
     
     override func viewDidLoad()
@@ -28,57 +32,67 @@ class QuestionViewController: UITableViewController {
         let nib = UINib(nibName: "QuestionTableViewCell", bundle: nil)
         
         tableView.register(nib, forCellReuseIdentifier: "questioncell")
-
+        
+        ServerTools.stringSimilarity(stringOne: "where am I", stringTwo: "who am I") {(intval:Float) -> Void in
+            print(intval)
+        }
+        
+        print("mid")
+        ServerTools.luisAnanlyzeString(str: "What time is the flight for the wedding?") {(int:String, ents:[String]) -> Void in
+            print("here")
+            print(int, ents)
+        }
     }
- 
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return questionList.count
+        return contactNameList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = questionTableView.dequeueReusableCell(withIdentifier: "questioncell", for: indexPath) as! QuestionTableViewCell
-        cell.questionLabel.text = questionList[indexPath.row]
+        cell.questionLabel.text = contactNameList[indexPath.row]
+        cell.profileImageView.image = UIImage.init(imageLiteralResourceName: contactImageList[indexPath.row])
         return cell;
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100;
+        return 60;
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = ChatViewController(nibName: "ChatViewController", bundle: nil)
+        var dataSource: FakeDataSource!
+        let pageSize = 50
         
-        // Prepare the popup assets
-        let title = "THIS IS THE DIALOG TITLE"
-        let message = "This is the message section of the popup dialog default view"
-        //let image = UIImage(named: "pexels-photo-103290")
         
-        // Create the dialog
-        let popup = PopupDialog(title: title, message: message, image: image)
-        
-        // Create buttons
-        let buttonOne = CancelButton(title: "CANCEL") {
-            print("You canceled the car dialog.")
+        switch indexPath.row {
+        case 0:
+            dataSource = FakeDataSource(messages: FriendMessageFactory.createMessages(sender:"Genevieve"), pageSize: pageSize)
+            
+            
+        case 1:
+            dataSource = FakeDataSource(messages: FriendMessageFactory.createMessages(sender:"Lucy"), pageSize: pageSize)
+            
+            
+        case 2:
+            dataSource = FakeDataSource(messages: FriendMessageFactory.createMessages(sender:"Chad"), pageSize: pageSize)
+            
+        default:
+            break
         }
         
-        let buttonTwo = DefaultButton(title: "ADMIRE CAR") {
-            print("What a beauty!")
-        }
         
-        let buttonThree = DefaultButton(title: "BUY CAR", height: 60) {
-            print("Ah, maybe next time :)")
-        }
+        vc.dataSource = dataSource
+        vc.messageSender = dataSource.messageSender
         
-        // Add buttons to dialog
-        // Alternatively, you can use popup.addButton(buttonOne)
-        // to add a single button
-        popup.addButtons([buttonOne, buttonTwo, buttonThree])
+        navigationController?.pushViewController(vc, animated: true)
         
-        // Present dialog
-        self.present(popup, animated: true, completion: nil)
+        
+        
     }
 }
 

@@ -8,6 +8,7 @@ target 'AutoText' do
   # Pods for AutoText
     pod 'Alamofire', '~> 4.4'
     pod 'Chatto', '= 3.1.0'
+    pod 'NoChat', '~> 0.3'
     pod 'ChattoAdditions', '= 3.1.0' # if you want to use the cells or the input component
     pod 'PopupDialog', '~> 0.5'
 

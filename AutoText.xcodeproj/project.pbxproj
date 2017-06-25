@@ -21,8 +21,30 @@
 		D8A46FCC1EFF321E0000BCBF /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A46FCB1EFF321E0000BCBF /* QuestionViewController.swift */; };
 		D8A46FD41EFF45300000BCBF /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A46FD21EFF45300000BCBF /* QuestionTableViewCell.swift */; };
 		D8A46FD51EFF45300000BCBF /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8A46FD31EFF45300000BCBF /* QuestionTableViewCell.xib */; };
-		D8AFE6A81EFF539600D07E74 /* LGSimpleChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AFE6A61EFF539600D07E74 /* LGSimpleChat.swift */; };
-		D8AFE6A91EFF539600D07E74 /* License in Resources */ = {isa = PBXBuildFile; fileRef = D8AFE6A71EFF539600D07E74 /* License */; };
+		D8A4984A1EFF58F300F88273 /* boy in Resources */ = {isa = PBXBuildFile; fileRef = D8A498471EFF58F300F88273 /* boy */; };
+		D8A4984B1EFF58F300F88273 /* girl in Resources */ = {isa = PBXBuildFile; fileRef = D8A498481EFF58F300F88273 /* girl */; };
+		D8A4984C1EFF58F300F88273 /* girl2 in Resources */ = {isa = PBXBuildFile; fileRef = D8A498491EFF58F300F88273 /* girl2 */; };
+		D8A498541EFF9F9C00F88273 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A498521EFF9F9C00F88273 /* ChatViewController.swift */; };
+		D8A498551EFF9F9C00F88273 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8A498531EFF9F9C00F88273 /* ChatViewController.xib */; };
+		D8A498571EFFA82700F88273 /* FakeMessageSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A498561EFFA82700F88273 /* FakeMessageSender.swift */; };
+		D8A498591EFFA83000F88273 /* FakeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A498581EFFA83000F88273 /* FakeDataSource.swift */; };
+		D8A4985C1EFFA8A500F88273 /* ChatItemsDemoDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A4985B1EFFA8A500F88273 /* ChatItemsDemoDecorator.swift */; };
+		D8A4985E1EFFA8A800F88273 /* DemoTextMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A4985D1EFFA8A800F88273 /* DemoTextMessageViewModel.swift */; };
+		D8A498621EFFA8D700F88273 /* DemoPhotoMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A4985F1EFFA8D700F88273 /* DemoPhotoMessageHandler.swift */; };
+		D8A498631EFFA8D700F88273 /* DemoPhotoMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A498601EFFA8D700F88273 /* DemoPhotoMessageModel.swift */; };
+		D8A498641EFFA8D700F88273 /* DemoPhotoMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A498611EFFA8D700F88273 /* DemoPhotoMessageViewModel.swift */; };
+		D8A498661EFFA8DA00F88273 /* BaseMessageCollectionViewCellAvatarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A498651EFFA8DA00F88273 /* BaseMessageCollectionViewCellAvatarStyle.swift */; };
+		D8A498681EFFA8DD00F88273 /* DemoTextMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A498671EFFA8DD00F88273 /* DemoTextMessageHandler.swift */; };
+		D8A4986A1EFFA90900F88273 /* DemoTextMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A498691EFFA90900F88273 /* DemoTextMessageModel.swift */; };
+		D8A4986E1EFFA90C00F88273 /* TimeSeparatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A4986B1EFFA90C00F88273 /* TimeSeparatorModel.swift */; };
+		D8A4986F1EFFA90C00F88273 /* TimeSeparatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A4986C1EFFA90C00F88273 /* TimeSeparatorPresenter.swift */; };
+		D8A498701EFFA90C00F88273 /* TimeSeparatorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A4986D1EFFA90C00F88273 /* TimeSeparatorCollectionViewCell.swift */; };
+		D8A498721EFFA93300F88273 /* BaseMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A498711EFFA93300F88273 /* BaseMessageHandler.swift */; };
+		D8A498761EFFA96300F88273 /* SendingStatusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A498731EFFA96300F88273 /* SendingStatusCollectionViewCell.swift */; };
+		D8A498771EFFA96300F88273 /* SendingStatusCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8A498741EFFA96300F88273 /* SendingStatusCollectionViewCell.xib */; };
+		D8A498781EFFA96300F88273 /* SendingStatusPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A498751EFFA96300F88273 /* SendingStatusPresenter.swift */; };
+		D8A4987A1EFFAB8C00F88273 /* FakeMessageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A498791EFFAB8C00F88273 /* FakeMessageFactory.swift */; };
+		D8A4987C1EFFAB9E00F88273 /* SlidingDatasSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A4987B1EFFAB9E00F88273 /* SlidingDatasSource.swift */; };
 		E8C7D33D566C75A2E23F8468 /* Pods_AutoText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0504B9BDA8259BC6D7B36619 /* Pods_AutoText.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,8 +93,30 @@
 		D8A46FCB1EFF321E0000BCBF /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		D8A46FD21EFF45300000BCBF /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionTableViewCell.swift; path = ../QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		D8A46FD31EFF45300000BCBF /* QuestionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionTableViewCell.xib; path = ../QuestionTableViewCell.xib; sourceTree = "<group>"; };
-		D8AFE6A61EFF539600D07E74 /* LGSimpleChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LGSimpleChat.swift; sourceTree = "<group>"; };
-		D8AFE6A71EFF539600D07E74 /* License */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License; sourceTree = "<group>"; };
+		D8A498471EFF58F300F88273 /* boy */ = {isa = PBXFileReference; lastKnownFileType = file; path = boy; sourceTree = "<group>"; };
+		D8A498481EFF58F300F88273 /* girl */ = {isa = PBXFileReference; lastKnownFileType = file; path = girl; sourceTree = "<group>"; };
+		D8A498491EFF58F300F88273 /* girl2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = girl2; sourceTree = "<group>"; };
+		D8A498521EFF9F9C00F88273 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		D8A498531EFF9F9C00F88273 /* ChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		D8A498561EFFA82700F88273 /* FakeMessageSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeMessageSender.swift; sourceTree = "<group>"; };
+		D8A498581EFFA83000F88273 /* FakeDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeDataSource.swift; sourceTree = "<group>"; };
+		D8A4985B1EFFA8A500F88273 /* ChatItemsDemoDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatItemsDemoDecorator.swift; sourceTree = "<group>"; };
+		D8A4985D1EFFA8A800F88273 /* DemoTextMessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoTextMessageViewModel.swift; sourceTree = "<group>"; };
+		D8A4985F1EFFA8D700F88273 /* DemoPhotoMessageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoPhotoMessageHandler.swift; sourceTree = "<group>"; };
+		D8A498601EFFA8D700F88273 /* DemoPhotoMessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoPhotoMessageModel.swift; sourceTree = "<group>"; };
+		D8A498611EFFA8D700F88273 /* DemoPhotoMessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoPhotoMessageViewModel.swift; sourceTree = "<group>"; };
+		D8A498651EFFA8DA00F88273 /* BaseMessageCollectionViewCellAvatarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMessageCollectionViewCellAvatarStyle.swift; sourceTree = "<group>"; };
+		D8A498671EFFA8DD00F88273 /* DemoTextMessageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoTextMessageHandler.swift; sourceTree = "<group>"; };
+		D8A498691EFFA90900F88273 /* DemoTextMessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoTextMessageModel.swift; sourceTree = "<group>"; };
+		D8A4986B1EFFA90C00F88273 /* TimeSeparatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSeparatorModel.swift; sourceTree = "<group>"; };
+		D8A4986C1EFFA90C00F88273 /* TimeSeparatorPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSeparatorPresenter.swift; sourceTree = "<group>"; };
+		D8A4986D1EFFA90C00F88273 /* TimeSeparatorCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSeparatorCollectionViewCell.swift; sourceTree = "<group>"; };
+		D8A498711EFFA93300F88273 /* BaseMessageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMessageHandler.swift; sourceTree = "<group>"; };
+		D8A498731EFFA96300F88273 /* SendingStatusCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendingStatusCollectionViewCell.swift; sourceTree = "<group>"; };
+		D8A498741EFFA96300F88273 /* SendingStatusCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendingStatusCollectionViewCell.xib; sourceTree = "<group>"; };
+		D8A498751EFFA96300F88273 /* SendingStatusPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendingStatusPresenter.swift; sourceTree = "<group>"; };
+		D8A498791EFFAB8C00F88273 /* FakeMessageFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeMessageFactory.swift; sourceTree = "<group>"; };
+		D8A4987B1EFFAB9E00F88273 /* SlidingDatasSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidingDatasSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +173,6 @@
 		D88D9F2B1EFF17CF003F3F8F = {
 			isa = PBXGroup;
 			children = (
-				D8AFE6A51EFF539600D07E74 /* LGSimpleChat */,
 				D88D9F361EFF17CF003F3F8F /* AutoText */,
 				D88D9F4D1EFF17CF003F3F8F /* AutoTextTests */,
 				D88D9F581EFF17CF003F3F8F /* AutoTextUITests */,
@@ -152,7 +195,11 @@
 		D88D9F361EFF17CF003F3F8F /* AutoText */ = {
 			isa = PBXGroup;
 			children = (
+				D8A4984D1EFF58F800F88273 /* Profile Pics */,
 				D87B50A41EFF281D00404EEB /* ServerTools.swift */,
+				D8A498521EFF9F9C00F88273 /* ChatViewController.swift */,
+				D8A498531EFF9F9C00F88273 /* ChatViewController.xib */,
+				D8A4985A1EFFA83600F88273 /* CHattoDemos */,
 				D88D9F371EFF17CF003F3F8F /* AppDelegate.swift */,
 				D88D9F391EFF17CF003F3F8F /* FirstViewController.swift */,
 				D88D9F3B1EFF17CF003F3F8F /* SecondViewController.swift */,
@@ -185,13 +232,40 @@
 			path = AutoTextUITests;
 			sourceTree = "<group>";
 		};
-		D8AFE6A51EFF539600D07E74 /* LGSimpleChat */ = {
+		D8A4984D1EFF58F800F88273 /* Profile Pics */ = {
 			isa = PBXGroup;
 			children = (
-				D8AFE6A61EFF539600D07E74 /* LGSimpleChat.swift */,
-				D8AFE6A71EFF539600D07E74 /* License */,
+				D8A498471EFF58F300F88273 /* boy */,
+				D8A498481EFF58F300F88273 /* girl */,
+				D8A498491EFF58F300F88273 /* girl2 */,
 			);
-			path = LGSimpleChat;
+			name = "Profile Pics";
+			sourceTree = "<group>";
+		};
+		D8A4985A1EFFA83600F88273 /* CHattoDemos */ = {
+			isa = PBXGroup;
+			children = (
+				D8A498731EFFA96300F88273 /* SendingStatusCollectionViewCell.swift */,
+				D8A498741EFFA96300F88273 /* SendingStatusCollectionViewCell.xib */,
+				D8A498791EFFAB8C00F88273 /* FakeMessageFactory.swift */,
+				D8A498751EFFA96300F88273 /* SendingStatusPresenter.swift */,
+				D8A498561EFFA82700F88273 /* FakeMessageSender.swift */,
+				D8A4987B1EFFAB9E00F88273 /* SlidingDatasSource.swift */,
+				D8A498711EFFA93300F88273 /* BaseMessageHandler.swift */,
+				D8A4985D1EFFA8A800F88273 /* DemoTextMessageViewModel.swift */,
+				D8A498651EFFA8DA00F88273 /* BaseMessageCollectionViewCellAvatarStyle.swift */,
+				D8A4985F1EFFA8D700F88273 /* DemoPhotoMessageHandler.swift */,
+				D8A498601EFFA8D700F88273 /* DemoPhotoMessageModel.swift */,
+				D8A498691EFFA90900F88273 /* DemoTextMessageModel.swift */,
+				D8A498671EFFA8DD00F88273 /* DemoTextMessageHandler.swift */,
+				D8A4986B1EFFA90C00F88273 /* TimeSeparatorModel.swift */,
+				D8A4986C1EFFA90C00F88273 /* TimeSeparatorPresenter.swift */,
+				D8A4986D1EFFA90C00F88273 /* TimeSeparatorCollectionViewCell.swift */,
+				D8A498611EFFA8D700F88273 /* DemoPhotoMessageViewModel.swift */,
+				D8A4985B1EFFA8A500F88273 /* ChatItemsDemoDecorator.swift */,
+				D8A498581EFFA83000F88273 /* FakeDataSource.swift */,
+			);
+			name = CHattoDemos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,10 +386,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8A4984C1EFF58F300F88273 /* girl2 in Resources */,
+				D8A4984A1EFF58F300F88273 /* boy in Resources */,
 				D88D9F441EFF17CF003F3F8F /* LaunchScreen.storyboard in Resources */,
 				D8A46FD51EFF45300000BCBF /* QuestionTableViewCell.xib in Resources */,
+				D8A4984B1EFF58F300F88273 /* girl in Resources */,
 				D88D9F411EFF17CF003F3F8F /* Assets.xcassets in Resources */,
-				D8AFE6A91EFF539600D07E74 /* License in Resources */,
+				D8A498771EFFA96300F88273 /* SendingStatusCollectionViewCell.xib in Resources */,
+				D8A498551EFF9F9C00F88273 /* ChatViewController.xib in Resources */,
 				D88D9F3F1EFF17CF003F3F8F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,11 +544,29 @@
 			files = (
 				D87B50A51EFF281D00404EEB /* ServerTools.swift in Sources */,
 				D8A46FCC1EFF321E0000BCBF /* QuestionViewController.swift in Sources */,
+				D8A4986A1EFFA90900F88273 /* DemoTextMessageModel.swift in Sources */,
+				D8A498721EFFA93300F88273 /* BaseMessageHandler.swift in Sources */,
 				D88D9F3C1EFF17CF003F3F8F /* SecondViewController.swift in Sources */,
+				D8A498781EFFA96300F88273 /* SendingStatusPresenter.swift in Sources */,
+				D8A498761EFFA96300F88273 /* SendingStatusCollectionViewCell.swift in Sources */,
+				D8A498631EFFA8D700F88273 /* DemoPhotoMessageModel.swift in Sources */,
+				D8A498681EFFA8DD00F88273 /* DemoTextMessageHandler.swift in Sources */,
+				D8A498641EFFA8D700F88273 /* DemoPhotoMessageViewModel.swift in Sources */,
+				D8A498541EFF9F9C00F88273 /* ChatViewController.swift in Sources */,
+				D8A498661EFFA8DA00F88273 /* BaseMessageCollectionViewCellAvatarStyle.swift in Sources */,
 				D8A46FD41EFF45300000BCBF /* QuestionTableViewCell.swift in Sources */,
+				D8A498591EFFA83000F88273 /* FakeDataSource.swift in Sources */,
+				D8A498701EFFA90C00F88273 /* TimeSeparatorCollectionViewCell.swift in Sources */,
 				D88D9F381EFF17CF003F3F8F /* AppDelegate.swift in Sources */,
+				D8A4986E1EFFA90C00F88273 /* TimeSeparatorModel.swift in Sources */,
 				D88D9F3A1EFF17CF003F3F8F /* FirstViewController.swift in Sources */,
-				D8AFE6A81EFF539600D07E74 /* LGSimpleChat.swift in Sources */,
+				D8A498571EFFA82700F88273 /* FakeMessageSender.swift in Sources */,
+				D8A4985E1EFFA8A800F88273 /* DemoTextMessageViewModel.swift in Sources */,
+				D8A4986F1EFFA90C00F88273 /* TimeSeparatorPresenter.swift in Sources */,
+				D8A498621EFFA8D700F88273 /* DemoPhotoMessageHandler.swift in Sources */,
+				D8A4987C1EFFAB9E00F88273 /* SlidingDatasSource.swift in Sources */,
+				D8A4985C1EFFA8A500F88273 /* ChatItemsDemoDecorator.swift in Sources */,
+				D8A4987A1EFFAB8C00F88273 /* FakeMessageFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

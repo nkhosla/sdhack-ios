@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Questions-->
+        <!--Question View Controller-->
         <scene sceneID="NR6-OH-SZo">
             <objects>
                 <tableViewController id="MYP-oV-4tV" customClass="QuestionViewController" customModule="AutoText" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,14 +22,14 @@
                             <outlet property="delegate" destination="MYP-oV-4tV" id="h1x-XG-EYJ"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Questions" id="Epd-Ja-u3k"/>
+                    <navigationItem key="navigationItem" id="ICF-0B-dnv"/>
                     <connections>
                         <outlet property="questionTableView" destination="4GQ-4X-fLZ" id="j60-2g-Ei9"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ylD-C0-h3G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-322"/>
+            <point key="canvasLocation" x="1720.8" y="-328.78560719640183"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -69,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="793" y="354"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -82,13 +82,32 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="MYP-oV-4tV" kind="relationship" relationship="viewControllers" id="le9-v3-ayb"/>
+                        <segue destination="2tb-HM-8Vr" kind="relationship" relationship="viewControllers" id="le9-v3-ayb"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="afm-XL-wPd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Questions-->
+        <scene sceneID="ctK-YG-QSF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2tb-HM-8Vr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Questions" id="Epd-Ja-u3k"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lL5-t4-r2l">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MYP-oV-4tV" kind="relationship" relationship="rootViewController" id="Qfv-vJ-q5e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qAf-Dr-v5X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="781.60000000000002" y="-328.78560719640183"/>
         </scene>
     </scenes>
     <resources>

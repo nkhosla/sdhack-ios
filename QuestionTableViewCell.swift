@@ -13,10 +13,15 @@ import UIKit
 class QuestionTableViewCell: UITableViewCell {
 
     @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        self.profileImageView.layer.cornerRadius = self.profileImageView.bounds.size.width/2
+        self.profileImageView.layer.masksToBounds = true
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
