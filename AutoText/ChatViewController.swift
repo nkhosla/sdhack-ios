@@ -79,7 +79,7 @@ class ChatViewController: BaseChatViewController {
         func createChatInputItems() -> [ChatInputItemProtocol] {
             var items = [ChatInputItemProtocol]()
             items.append(self.createTextInputItem())
-            items.append(self.createPhotoInputItem())
+            //items.append(self.createPhotoInputItem())
             return items
         }
         
@@ -87,6 +87,7 @@ class ChatViewController: BaseChatViewController {
             let item = TextChatInputItem()
             item.textInputHandler = { [weak self] text in
                 self?.dataSource.addTextMessage(text)
+                AnsweredQuestionStore.shared.createAnswerForMostRecentQuestion(a:text)
             }
             return item
         }

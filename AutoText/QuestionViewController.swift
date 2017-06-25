@@ -44,6 +44,12 @@ class QuestionViewController: UITableViewController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        AnsweredQuestionStore.shared.mostRecentQuestion = ["",""]
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
@@ -73,13 +79,52 @@ class QuestionViewController: UITableViewController {
         case 0:
             dataSource = FakeDataSource(messages: FriendMessageFactory.createMessages(sender:"Genevieve"), pageSize: pageSize)
             
-            
+            ServerTools.luisAnanlyzeString(str: "When are we meeting to go to the party?"){ (intent, entities) in
+                var econcat = ""
+                for (index, e) in entities.enumerated() {
+                    if index==0 {
+                        econcat += e
+                    } else {
+                        econcat += " "
+                        econcat += e
+                    }
+                }
+                
+                AnsweredQuestionStore.shared.mostRecentQuestion = [intent, econcat]
+            }
         case 1:
             dataSource = FakeDataSource(messages: FriendMessageFactory.createMessages(sender:"Lucy"), pageSize: pageSize)
             
+            ServerTools.luisAnanlyzeString(str: "What time does this party start?"){ (intent, entities) in
+                var econcat = ""
+                for (index, e) in entities.enumerated() {
+                    if index==0 {
+                        econcat += e
+                    } else {
+                        econcat += " "
+                        econcat += e
+                    }
+                }
+                
+                AnsweredQuestionStore.shared.mostRecentQuestion = [intent, econcat]
+            }
             
         case 2:
             dataSource = FakeDataSource(messages: FriendMessageFactory.createMessages(sender:"Chad"), pageSize: pageSize)
+            
+            ServerTools.luisAnanlyzeString(str: "What time are you arriving?"){ (intent, entities) in
+                var econcat = ""
+                for (index, e) in entities.enumerated() {
+                    if index==0 {
+                        econcat += e
+                    } else {
+                        econcat += " "
+                        econcat += e
+                    }
+                }
+                
+                AnsweredQuestionStore.shared.mostRecentQuestion = [intent, econcat]
+            }
             
         default:
             break
