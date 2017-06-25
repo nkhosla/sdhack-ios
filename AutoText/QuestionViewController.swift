@@ -36,6 +36,12 @@ class QuestionViewController: UITableViewController {
         ServerTools.stringSimilarity(stringOne: "where am I", stringTwo: "who am I") {(intval:Float) -> Void in
             print(intval)
         }
+        
+        print("mid")
+        ServerTools.luisAnanlyzeString(str: "What time is the flight for the wedding?") {(int:String, ents:[String]) -> Void in
+        print("here")
+            print(int, ents)
+        }
     }
  
     override func numberOfSections(in tableView: UITableView) -> Int {

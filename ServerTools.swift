@@ -58,7 +58,64 @@ class ServerTools: NSObject {
         
     }
     
-    class func luisAnanlyzeString(str: String, completion: @escaping (_ dict: String) -> Void) {
+    class func luisAnanlyzeString(str: String, completion: @escaping (_ intent: String, _ entities:[String]) -> Void) {
+        
+        print("started luis function")
+        let key = "f5aa08fcae3b463f8c5a2f9896985b34"
+        
+        /**
+         LUIS
+         get https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/6dc24e47-4be6-4a17-bad5-11cf23a1f1b0
+         */
+        
+        // Add URL parameters
+        let urlParams = [
+            "subscription-key":key,
+            "timezoneOffset":"0",
+            "verbose":"true",
+            "q":str,
+            ]
+        
+        // Fetch Request
+        print("sending request")
+        Alamofire.request("https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/6dc24e47-4be6-4a17-bad5-11cf23a1f1b0", method: .get, parameters: urlParams)
+            .validate(statusCode: 200..<300)
+            .responseJSON { response in
+                if (response.result.error == nil) {
+                    
+                    if let result = response.result.value {
+                        print("JSON: \(result)")
+                        
+                        let json = result as! NSDictionary
+                        
+                        print(type(of: json))
+                        
+                        let topScoringIntentDict = json["topScoringIntent"] as! NSDictionary
+                        let intent = topScoringIntentDict["intent"] as! String
+                        print(intent)
+                        
+                        
+                        let entityArray = json["entities"] as! NSArray
+                        var entities = [String]()
+                        let maxIndex = entityArray.count - 1
+                        
+                        for i in 0...maxIndex {
+                            let e = entityArray[i] as! NSDictionary
+                            entities.append(e["entity"] as! String)
+                        }
+                        
+                        print(entities)
+                        
+                        completion(intent, entities)
+                        
+                        
+                    }
+                }
+                else {
+                    debugPrint("HTTP Request failed: \(response.result.error)")
+                }
+        }
+
         
     }
     
