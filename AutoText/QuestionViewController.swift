@@ -38,7 +38,7 @@ class QuestionViewController: UITableViewController {
         }
         
         print("mid")
-        ServerTools.luisAnanlyzeString(str: "What time is the flight for the wedding?") {(int:String, ents:[String]) -> Void in
+        ServerTools.luisAnanlyzeString(str: "What time is the flight for the wedding?") {(int:String, ents:String) -> Void in
             print("here")
             print(int, ents)
         }
@@ -73,57 +73,31 @@ class QuestionViewController: UITableViewController {
         let vc = ChatViewController(nibName: "ChatViewController", bundle: nil)
         var dataSource: FakeDataSource!
         let pageSize = 50
+        var name = ""
         
         
         switch indexPath.row {
         case 0:
             dataSource = FakeDataSource(messages: FriendMessageFactory.createMessages(sender:"Genevieve"), pageSize: pageSize)
-            
+            name = "Genevieve"
             ServerTools.luisAnanlyzeString(str: "When are we meeting to go to the party?"){ (intent, entities) in
-                var econcat = ""
-                for (index, e) in entities.enumerated() {
-                    if index==0 {
-                        econcat += e
-                    } else {
-                        econcat += " "
-                        econcat += e
-                    }
-                }
                 
-                AnsweredQuestionStore.shared.mostRecentQuestion = [intent, econcat]
+                AnsweredQuestionStore.shared.mostRecentQuestion = [intent, entities]
             }
         case 1:
             dataSource = FakeDataSource(messages: FriendMessageFactory.createMessages(sender:"Lucy"), pageSize: pageSize)
-            
+            name = "Lucy"
             ServerTools.luisAnanlyzeString(str: "What time does this party start?"){ (intent, entities) in
-                var econcat = ""
-                for (index, e) in entities.enumerated() {
-                    if index==0 {
-                        econcat += e
-                    } else {
-                        econcat += " "
-                        econcat += e
-                    }
-                }
-                
-                AnsweredQuestionStore.shared.mostRecentQuestion = [intent, econcat]
+
+                AnsweredQuestionStore.shared.mostRecentQuestion = [intent, entities]
             }
             
         case 2:
             dataSource = FakeDataSource(messages: FriendMessageFactory.createMessages(sender:"Chad"), pageSize: pageSize)
-            
+            name = "Chad"
             ServerTools.luisAnanlyzeString(str: "What time are you arriving?"){ (intent, entities) in
-                var econcat = ""
-                for (index, e) in entities.enumerated() {
-                    if index==0 {
-                        econcat += e
-                    } else {
-                        econcat += " "
-                        econcat += e
-                    }
-                }
-                
-                AnsweredQuestionStore.shared.mostRecentQuestion = [intent, econcat]
+
+                AnsweredQuestionStore.shared.mostRecentQuestion = [intent, entities]
             }
             
         default:
@@ -132,6 +106,7 @@ class QuestionViewController: UITableViewController {
         
         
         vc.dataSource = dataSource
+        vc.title = name
         vc.messageSender = dataSource.messageSender
         
         navigationController?.pushViewController(vc, animated: true)

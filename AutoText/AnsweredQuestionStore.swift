@@ -45,7 +45,13 @@ class AnsweredQuestionStore: NSObject {
             print("Tried to make QA pair from most recent Q and failed")
             
         }
+        
     }
     
+    
+    public func getAnswersForQuestion(q: String, completion: () -> ) {
+        ServerTools.luisAnanlyzeString(str: <#T##String#>, completion: <#T##(String, String) -> Void#>)
+    }
+ 
     
 }

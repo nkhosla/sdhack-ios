@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 class ServerTools: NSObject {
-
+    
     
     class func getImageURL(keyword: String) -> NSURL {
         return NSURL.init();
@@ -44,9 +44,9 @@ class ServerTools: NSObject {
                     
                     debugPrint("HTTP Response Body: \(response)")
                     
-                  let intvalstring = "\(response)".components(separatedBy: " ")[1]
-                  print(intvalstring)
-                   
+                    let intvalstring = "\(response)".components(separatedBy: " ")[1]
+                    print(intvalstring)
+                    
                     
                     completion(Float(intvalstring)!)
                 }
@@ -58,7 +58,7 @@ class ServerTools: NSObject {
         
     }
     
-    class func luisAnanlyzeString(str: String, completion: @escaping (_ intent: String, _ entities:[String]) -> Void) {
+    class func luisAnanlyzeString(str: String, completion: @escaping (_ intent: String, _ entities:String) -> Void) {
         
         print("started luis function")
         let key = "f5aa08fcae3b463f8c5a2f9896985b34"
@@ -84,11 +84,11 @@ class ServerTools: NSObject {
                 if (response.result.error == nil) {
                     
                     if let result = response.result.value {
-                        print("JSON: \(result)")
+                       // print("JSON: \(result)")
                         
                         let json = result as! NSDictionary
                         
-                        print(type(of: json))
+                       // print(type(of: json))
                         
                         let topScoringIntentDict = json["topScoringIntent"] as! NSDictionary
                         let intent = topScoringIntentDict["intent"] as! String
@@ -96,12 +96,18 @@ class ServerTools: NSObject {
                         
                         
                         let entityArray = json["entities"] as! NSArray
-                        var entities = [String]()
+                        var entities = ""
                         let maxIndex = entityArray.count - 1
                         
-                        for i in 0...maxIndex {
-                            let e = entityArray[i] as! NSDictionary
-                            entities.append(e["entity"] as! String)
+                        print("maxidx ",maxIndex)
+                        
+                        if maxIndex>0 {
+                            for i in 0...maxIndex {
+                                let e = entityArray[i] as! NSDictionary
+                                let  estring = e["entity"] as! String
+                                entities += estring
+                                entities += " "
+                            }
                         }
                         
                         print(entities)
@@ -115,7 +121,7 @@ class ServerTools: NSObject {
                     debugPrint("HTTP Request failed: \(response.result.error)")
                 }
         }
-
+        
         
     }
     
