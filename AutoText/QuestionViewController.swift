@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ExpandingTableView
 
 class QuestionViewController: UITableViewController {
     
