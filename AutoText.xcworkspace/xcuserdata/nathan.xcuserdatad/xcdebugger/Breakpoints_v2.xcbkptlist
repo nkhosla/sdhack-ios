@@ -9,13 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AutoText/QuestionViewController.swift"
-            timestampString = "520058131.146951"
+            filePath = "ServerTools.swift"
+            timestampString = "520064946.880139"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "luisAnanlyzeString(str:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
