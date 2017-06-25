@@ -45,6 +45,7 @@
 		D8A498781EFFA96300F88273 /* SendingStatusPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A498751EFFA96300F88273 /* SendingStatusPresenter.swift */; };
 		D8A4987A1EFFAB8C00F88273 /* FakeMessageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A498791EFFAB8C00F88273 /* FakeMessageFactory.swift */; };
 		D8A4987C1EFFAB9E00F88273 /* SlidingDatasSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A4987B1EFFAB9E00F88273 /* SlidingDatasSource.swift */; };
+		D8A4987E1EFFC25800F88273 /* AnswerdQuestionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A4987D1EFFC25800F88273 /* AnswerdQuestionStore.swift */; };
 		E8C7D33D566C75A2E23F8468 /* Pods_AutoText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0504B9BDA8259BC6D7B36619 /* Pods_AutoText.framework */; };
 /* End PBXBuildFile section */
 
@@ -117,6 +118,7 @@
 		D8A498751EFFA96300F88273 /* SendingStatusPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendingStatusPresenter.swift; sourceTree = "<group>"; };
 		D8A498791EFFAB8C00F88273 /* FakeMessageFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeMessageFactory.swift; sourceTree = "<group>"; };
 		D8A4987B1EFFAB9E00F88273 /* SlidingDatasSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidingDatasSource.swift; sourceTree = "<group>"; };
+		D8A4987D1EFFC25800F88273 /* AnswerdQuestionStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerdQuestionStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 				D8A46FD21EFF45300000BCBF /* QuestionTableViewCell.swift */,
 				D8A46FD31EFF45300000BCBF /* QuestionTableViewCell.xib */,
 				D88D9F451EFF17CF003F3F8F /* Info.plist */,
+				D8A4987D1EFFC25800F88273 /* AnswerdQuestionStore.swift */,
 			);
 			path = AutoText;
 			sourceTree = "<group>";
@@ -560,6 +563,7 @@
 				D88D9F381EFF17CF003F3F8F /* AppDelegate.swift in Sources */,
 				D8A4986E1EFFA90C00F88273 /* TimeSeparatorModel.swift in Sources */,
 				D88D9F3A1EFF17CF003F3F8F /* FirstViewController.swift in Sources */,
+				D8A4987E1EFFC25800F88273 /* AnswerdQuestionStore.swift in Sources */,
 				D8A498571EFFA82700F88273 /* FakeMessageSender.swift in Sources */,
 				D8A4985E1EFFA8A800F88273 /* DemoTextMessageViewModel.swift in Sources */,
 				D8A4986F1EFFA90C00F88273 /* TimeSeparatorPresenter.swift in Sources */,
