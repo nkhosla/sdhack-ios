@@ -40,7 +40,8 @@ class SendingStatusModel: ChatItemProtocol {
 
     init (uid: String, status: MessageStatus) {
         self.uid = uid
-        self.status = status
+        //self.status = status
+        self.status = .success
     }
 }
 

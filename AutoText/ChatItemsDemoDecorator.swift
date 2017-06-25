@@ -100,6 +100,7 @@ final class ChatItemsDemoDecorator: ChatItemsDecoratorProtocol {
     }
 
     func showsStatusForMessage(_ message: MessageModelProtocol) -> Bool {
-        return message.status == .failed || message.status == .sending
+        // return message.status == .failed || message.status == .sending
+        return true
     }
 }
