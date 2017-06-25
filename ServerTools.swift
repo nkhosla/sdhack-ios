@@ -13,7 +13,7 @@ class ServerTools: NSObject {
 
     
     func getImageURL(keyword: String) -> NSURL {
-        <#function body#>
+        return NSURL.init();
     }
     
     func clearDatabase() {
