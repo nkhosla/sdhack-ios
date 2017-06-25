@@ -1,25 +1,12 @@
 PODS:
   - Alamofire (4.5.0)
-  - Chatto (3.1.0)
-  - ChattoAdditions (3.1.0):
-    - Chatto
-  - NoChat (0.3.2)
-  - PopupDialog (0.5.4)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
-  - Chatto (= 3.1.0)
-  - ChattoAdditions (= 3.1.0)
-  - NoChat (~> 0.3)
-  - PopupDialog (~> 0.5)
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
-  Chatto: d959be2d284db62c713c68d7c39f2712ff902fa2
-  ChattoAdditions: 64cfe2d3414a65d2d6bc8a1c5704df491eec28b6
-  NoChat: aaa980b8b29c0db8c8bd8ecde22e718cc8ad1bf7
-  PopupDialog: 75cf955693590b0cb2fdde00223fb65d99c57247
 
-PODFILE CHECKSUM: 01a278de6b62eb60bcc92884fa9efb62987cc854
+PODFILE CHECKSUM: 218471f36135b9c78914c1cf0c979c9760ec526f
 
 COCOAPODS: 1.0.1
